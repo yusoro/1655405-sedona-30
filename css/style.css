@@ -1,0 +1,203 @@
+@font-face {
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-style: normal;
+    src:local("PT Sans"),
+    url(../fonts/PTSans.woff) format("woff"),
+    url(../fonts/PTSans.woff2) format("woff2");
+}
+@font-face {
+    font-family: "PT Sans";
+    font-weight: 700;
+    font-style: normal;
+    src:local("PT Sans"),
+    url(../fonts/PTSans-Bold.woff) format("woff"),
+    url(../fonts/PTSans-Bold.woff2) format("woff2");
+}
+
+:root {
+    --basic-white: #ffffff;
+    --basic-black: #000000;
+    --basic-blue: #81b3d2;
+    --basic-grey: #888888;
+    --add-grey: #eeeeee;
+    --basic-brown: #766357;
+    --special-brown-hover:#604E43;
+    --special-brown-active:#503E33;
+    --special-blue-hover:#669EC0;
+    --special-blue-active:#5496BD;
+}
+
+.page-body {
+    width: 1280px;
+    margin: 0;
+    padding: 0 40px;
+    background-color: var(--basic-grey);
+    font-family: "PT Sans", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--basic-black);
+    text-transform: uppercase;
+    
+    
+}
+.main-header, .container, .main-footer {
+    width: 1200px;
+    margin: 0;
+    background-color: var(--basic-white);
+    padding: 0;
+    text-align: center;
+}
+
+.container h1 {
+    margin-top: 0;
+}
+.site-navigation {
+    list-style: none;
+    text-align: left;
+}
+.site-navigation a {
+    text-decoration: none;
+    color: var(--basic-black);
+    font-weight: 700;
+}
+.site-navigation a:hover, .site-navigation a:focus {
+    color: var(--basic-blue);
+}
+.site-navigation a:active {
+    color: var(--basic-black);
+    opacity: 0.3;
+}
+.main-header {
+    background-image: url("../img/mask.svg"), url("../img/index-bg.jpg");
+    background-size: auto, 1200px 509px;
+    background-position: 0 509px, 0 55px;
+    background-repeat: no-repeat;
+    
+}
+.intro {
+    font-size: 21px;
+    font-weight: 700;
+}
+.features-list, .add-feature-list {
+    padding: 0;
+    margin: 0;
+}
+.feature-item {
+    line-height: 21px;
+    list-style: none;
+    background-color: var(--add-grey);
+}
+.main-feature-item {
+    background-color: var(--basic-blue);
+    color: var(--basic-white);
+}
+
+.add-feature-list, .add-feature-list li {
+    background-color: var(--basic-white); 
+    color: black;
+    margin: 0;
+}
+
+.feature-item h3, .feature-item h4 {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 21px;
+}
+.accomodation::before {
+    content: url("../img/icon-accomodation.svg");
+}
+.meals::before {
+    content: url("../img/icon-meals.svg");
+}
+.souvenirs::before {
+    content: url("../img/icon-souvenirs.svg");
+}
+.search h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 24px;
+}
+.search p {
+    line-height: 24px;
+}
+.main-button {
+    font-weight: 700;
+    font-size: 21px;
+    background-color: var(--basic-brown);
+    color: var(--basic-white);
+    font-family: inherit;
+    line-height: 26px;
+    text-transform: uppercase;
+    border: none;
+    width: 568px;
+    height: 86px;
+}
+.main-button:hover, .main-button:focus {
+    background-color: var(--special-brown-hover);
+    color: var(--basic-white);
+    border: none;
+}
+.main-button:active {
+    background-color: var(--special-brown-active);
+    color: rgba(255, 255, 255, 0.3);
+    border: none;
+    outline: none;
+}
+
+.main-footer {
+    background-image: url("../img/map.png");
+    width: 1199px;
+    height: 594px;
+    padding-top: 1px;
+}
+.footer-contacts {
+    font-weight: 700;
+    font-size: 21px;
+    background-color: var(--basic-white);
+    opacity: 0.9;
+    margin-top: 472px;
+    
+}
+.footer-phone {
+    text-decoration: none;
+    color: var(--basic-black);
+}
+.social-button {
+    display: block;
+    text-decoration: none;
+    width: 46px;
+    height: 48px;  
+    background-color: var(--basic-blue);
+}
+.social-button:hover, .social-button:focus {
+    background-color: var(--special-blue-hover);
+}
+.social-button:active {
+    background-color: var(--special-blue-active);
+}
+.social-button.twitter:active, .social-button.facebook:active, .social-button.youtube:active {
+    fill-opacity: 0.3;
+}
+
+.social li {
+    list-style: none;
+}
+.copyright {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.copyright a {
+    content: url("../img/logo-htmlacademy.svg");
+    
+}
+.copyright a:hover {
+    content: url("../img/logo-htmlacademy-hover.svg");
+}
+.copyright a:active {
+    content: url("../img/logo-htmlacademy-active.svg");
+}
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
@@ -7,14 +7,16 @@
     <link rel="icon" href="favicon-32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon-152.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header>
-        <nav>
-          <a href="index.html">
+  <body class="page-body">
+    <header class="main-header">
+        <nav class="main-navigation">
+          <a class="main-header-logo" href="index.html">
             <img src="img/logo.svg" width="138" height="70" alt="Логотип города Седона">
           </a>
-          <ul>
+          <ul class="site-navigation">
             <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
             <li><a href="#">Карта штата</a></li>
@@ -22,9 +24,9 @@
           </ul>
         </nav>
     </header>
-    <main>
+    <main class="page-catalog container">
         <h1>Поиск гостиницы</h1>
-        <section>
+        <section class="filter">
             <h2>Фильтр по гостиницам</h2>
             <form method="get" action="https://echo.htmlacademy.ru">
                 <fieldset>
