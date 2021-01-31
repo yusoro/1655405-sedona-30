@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
-    <header class="main-header">
+    <header class="catalog-header">
         <nav class="main-navigation">
           <a class="main-header-logo" href="index.html">
             <img src="img/logo.svg" width="138" height="70" alt="Логотип города Седона">
@@ -29,7 +29,7 @@
         <section class="filter">
             <h2>Фильтр по гостиницам</h2>
             <form method="get" action="https://echo.htmlacademy.ru">
-                <fieldset>
+                <fieldset class="filter-facilities">
                   <legend>Инфраструктура:</legend>
                   <ul>
                       <li>
@@ -46,7 +46,7 @@
                       </li>
                     </ul>
                 </fieldset>
-                <fieldset>
+                <fieldset class="filter-type">
                   <legend>Тип жилья:</legend>
                   <ul>
                     <li>
@@ -63,7 +63,7 @@
                     </li>
                 </ul>
                 </fieldset>
-                <fieldset>
+                <fieldset class="filter-cost">
                     <legend>Стоимость в сутки (Р):</legend>
                     <div>
                       <label for="filter-min-cost">От</label>

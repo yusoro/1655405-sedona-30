@@ -42,7 +42,7 @@
     
     
 }
-.main-header, .container, .main-footer {
+.main-header, .container, .main-footer, .catalog-header {
     width: 1200px;
     margin: 0;
     background-color: var(--basic-white);
@@ -70,11 +70,15 @@
     opacity: 0.3;
 }
 .main-header {
+    background-color: var(--basic-blue);
     background-image: url("../img/mask.svg"), url("../img/index-bg.jpg");
     background-size: auto, 1200px 509px;
     background-position: 0 509px, 0 55px;
     background-repeat: no-repeat;
     
+}
+.main-navigation {
+    background-color: var(--basic-white);
 }
 .intro {
     font-size: 21px;
@@ -147,9 +151,6 @@
 }
 
 .main-footer {
-    background-image: url("../img/map.png");
-    width: 1199px;
-    height: 594px;
     padding-top: 1px;
 }
 .footer-contacts {
@@ -157,7 +158,7 @@
     font-size: 21px;
     background-color: var(--basic-white);
     opacity: 0.9;
-    margin-top: 472px;
+    margin-top: -120px;
     
 }
 .footer-phone {
@@ -201,3 +202,8 @@
     content: url("../img/logo-htmlacademy-active.svg");
 }
 
+/*catalog*/
+.filter {
+    background: url("../img/filter-bg.jpg") no-repeat;
+    
+}
