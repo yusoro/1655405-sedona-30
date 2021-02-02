@@ -34,7 +34,9 @@
     --text-active: rgba(255, 255, 255, 0.3);
     --link-active: rgba(0, 0, 0, 0.3);
 }
-
+.page {
+  height: 100%;
+}
 .page-body {
     width: 1280px;
     margin: 0;
@@ -46,8 +48,9 @@
     line-height: 26px;
     color: var(--basic-black);
     text-transform: uppercase;
-    
-    
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content ;
 }
 .main-header, .container, .main-footer, .catalog-header {
     width: 1200px;
@@ -56,6 +59,7 @@
     padding: 0;
     text-align: center;
     box-shadow: 0px 5px 15px var(--shadow-color);
+    
 }
 
 .container h1 {
@@ -64,6 +68,8 @@
 .site-navigation {
     list-style: none;
     text-align: left;
+    margin: 0;
+    padding: 0;
 }
 .site-navigation a {
     text-decoration: none;
@@ -83,7 +89,11 @@
     background-size: auto, 1200px 509px;
     background-position: 0 509px, 0 55px;
     background-repeat: no-repeat;
-    
+    display: grid;
+
+}
+.welcome-intro {
+  justify-self: center;
 }
 .main-navigation {
     background-color: var(--basic-white);
@@ -100,36 +110,72 @@
     line-height: 21px;
     list-style: none;
     background-color: var(--add-grey);
+    
 }
 .main-feature-item {
     background-color: var(--basic-blue);
     color: var(--basic-white);
+    
 }
 
 .add-feature-list, .add-feature-list li {
     background-color: var(--basic-white); 
     color: black;
     margin: 0;
+    
 }
-
+.features-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 256px 330px 256px 256px;
+}
+.feature-item:first-child {
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+.feature-item:nth-child(2) {
+  grid-column: 1/4;
+  grid-row: 3/4;
+}
+.feature-item:nth-child(3) {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+.feature-item:nth-child(4) {
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+.feature-item:nth-child(5) {
+  grid-column: 3/4;
+  grid-row: 4/5;
+}
+.add-feature-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 330px;
+  list-style: none;
+}
 .feature-item h3, .feature-item h4 {
     font-size: 21px;
     font-weight: 700;
     line-height: 21px;
 }
 .accomodation::before {
-    content: url("../img/icon-accomodation.svg");
+  content: url("../img/icon-accomodation.svg");
+  display: block;
 }
 .meals::before {
-    content: url("../img/icon-meals.svg");
+  content: url("../img/icon-meals.svg");
+  display: block;
 }
 .souvenirs::before {
-    content: url("../img/icon-souvenirs.svg");
+  content: url("../img/icon-souvenirs.svg");
+  display: block;
 }
 .search h2 {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 24px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 24px;
 }
 .search p {
     line-height: 24px;
@@ -167,7 +213,15 @@
     background-color: var(--basic-white);
     opacity: 0.9;
     margin-top: -120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 120px;
     
+}
+.contacts {
+  width: 327px;
+  justify-self: end;
+  
 }
 .footer-contacts.catalog {
     margin-top: 0;
@@ -175,6 +229,10 @@
 .footer-phone {
     text-decoration: none;
     color: var(--basic-black);
+}
+.social {
+  width: 400px;
+  
 }
 .social-button {
     display: block;
@@ -200,6 +258,10 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 26px;
+    padding: 0;
+    margin: 0;
+    width: 327px;
+    height: 120px;
 }
 
 .copyright a {
@@ -237,28 +299,28 @@
   font-weight: 700;
     color: var(--basic-white);
 }
-.check-mark {
+.checkbox {
   display: none;
 }
-.check-mark:enabled+label {
-  
-  vertical-align: top;
-}
-.check-mark+label::before {
+
+.checkbox+label::before {
     content: "";
     display: inline-block;
     width: 23px;
     height: 23px;
     vertical-align: top;
-    border: 2px solid var(--basic-white);
+    background: url("../img/checkbox-off.svg");
     border-radius: 2px;
-
+    margin-right: 16px;
 }
-.check-mark:checked+label::before {
-    background: url("../img/check-active.svg") no-repeat; 
+.checkbox:checked+label::before {
+    background: url("../img/checkbox-on.svg"); 
 }
-.check-mark:disabled+label::before {
-    border: 2px solid var(--special-disabled);
+.checkbox:disabled+label::before {
+    background: url("../img/checkbox-off-disabled.svg");
+}
+.checkbox:checked:disabled+label::before {
+  background: url("../img/checkbox-on-disabled.svg");
 }
 .cost-range {
   border: 2px solid var(--basic-white);
