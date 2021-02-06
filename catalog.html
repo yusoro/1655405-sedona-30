@@ -29,7 +29,7 @@
         <h1>Поиск гостиницы</h1>
         <section class="filter">
           <h2>Фильтр по гостиницам</h2>
-          <form method="get" action="https://echo.htmlacademy.ru">
+          <form class="form-filter" method="get" action="https://echo.htmlacademy.ru">
               <fieldset class="filter-facilities">
                 <legend>Инфраструктура:</legend>
                 <ul>
@@ -107,13 +107,11 @@
           <h2>Список найденных гостиниц</h2>
           <ul class="result-list">
               <li class="result-item">
-                  <img src="img/amara.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & Spa">
+                  <img class="item-picture" src="img/amara.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & Spa">
                   <span class="stars stars-4">4 звезды</span>
-                  <div>
-                    
+                  <div class="item-info">
                     <h3><a class="result-item-name hotel" href="#">Amara Resort & Spa</a></h3>
-                    
-                    <p>
+                    <p class="item-price">
                       <span>Гостиница</span>
                       <span>От 4000 Р.</span>
                     </p>
@@ -121,16 +119,16 @@
                       <a class="detailed" href="#">Подробнее</a>
                       <button class="reserve" type="submit">Забронировать</button>
                     </div>
-                    <span class="rating">Рейтинг: 8,5</span>
+                    
                   </div>
-                  
+                  <span class="rating">Рейтинг: 8,5</span>
               </li>
               <li class="result-item">
-                  <img src="img/desert-inn.jpg" width="135" height="90" alt="Фото гостиницы Desert Quail Inn">
+                  <img class="item-picture" src="img/desert-inn.jpg" width="135" height="90" alt="Фото гостиницы Desert Quail Inn">
                   <span class="stars stars-3">3 звезды</span>
-                  <div>
+                  <div class="item-info">
                     <h3><a class="result-item-name motel" href="#">Desert Quail Inn</a></h3>
-                    <p>
+                    <p class="item-price">
                       <span>Мотель</span>
                       <span>От 3000 Р.</span>
                     </p>
@@ -138,16 +136,16 @@
                       <a class="detailed" href="#">Подробнее</a>
                       <button class="reserve" type="submit">Забронировать</button>
                     </div>
-                  <span class="rating">Рейтинг: 8,9</span>
-                  </div>
                   
+                  </div>
+                  <span class="rating">Рейтинг: 8,9</span>
               </li>
               <li class="result-item">
-                  <img src="img/villas.jpg" width="135" height="90" alt="Фото гостиницы Villas at Poco Diablo">
+                  <img class="item-picture" src="img/villas.jpg" width="135" height="90" alt="Фото гостиницы Villas at Poco Diablo">
                   <span class="stars stars-2">2 звезды</span>
-                  <div>
+                  <div class="item-info">
                     <h3><a class="result-item-name apparts" href="#">Villas at Poco Diablo</a></h3>
-                    <p>
+                    <p class="item-price">
                       <span>Апартаменты</span>
                       <span>От 2000 Р.</span>
                     </p>
@@ -155,8 +153,9 @@
                       <a class="detailed" href="#">Подробнее</a>
                       <button class="reserve" type="submit">Забронировать</button>
                     </div>
-                  <span class="rating">Рейтинг: 9,2</span>
+                  
                   </div>
+                  <span class="rating">Рейтинг: 9,2</span>
               </li>
           </ul>
     
