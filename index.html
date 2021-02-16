@@ -28,23 +28,23 @@
       </header>
       <main class="content">
         <h1 class="visually-hidden">О Седоне</h1>
-        <p class="intro">Седона - небольшой городок в Аризоне, <br>заслуживающий большего!</p>
+        <p class="intro">Седона &mdash; небольшой городок в Аризоне, <br>заслуживающий большего!</p>
         <section class="features">
           <h2 class="visually-hidden">Преимущества</h2>
-          <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+          <p class="features-title">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
           <ul class="features-list">
             <li class="feature-item main-feature-item">
               <div class="feature-description">
-                <h3>Настоящий городок</h3>
-                <span>№1</span>
-                <p>Седона - не аттракцион для туристов, там <br>
+                <h3>Настоящий<br> городок</h3>
+                <span>&mdash; №1 &mdash;</span>
+                <p>Седона — не аттракцион для туристов, там <br>
               течёт своя жизнь</p>
               </div>
               <img src="img/town-view.jpg" width="800" height="256" alt="Виды Седоны">
                 <ul class="add-feature-list">
                   <li class="add-feature-item">
                     <h4 class="accomodation">Жильё</h4>
-                    <p>Рекомендуем пожить в настоящем мотеле,<br> 
+                    <p>Рекомендуем пожить в настоящем<br> мотеле, 
                     всё как в кино!</p>
                   </li>
                   <li class="add-feature-item">
@@ -63,7 +63,7 @@
               <img src="img/bridge-view.jpg" width="800" height="256" alt="Мост дьявола">
               <div class="feature-description">
                 <h3>Там есть <br>Мост дьявола</h3>
-                <span>№2</span>
+                <span>&mdash; №2 &mdash;</span>
                 <p>Да, по нему можно пройти! Если конечно<br>
                 вы осмелитесь</p>
               </div>
@@ -72,7 +72,7 @@
               <div class="feature-description">
                 <h3>Небольшая<br>
                 площадь</h3>
-                <span>№3</span>
+                <span>&mdash; №3 &mdash;</span>
                 <p>Все достопримечательности<br>
                 находятся очень близко</p>
               </div>
@@ -81,7 +81,7 @@
               <div class="feature-description">
                 <h3>Красивая<br> 
                   дорога</h3>
-                <span>№4</span>
+                <span>&mdash; №4 &mdash;</span>
                 <p>Ехать в Седону из Лас-Вегаса совсем<br>
                   не скучно!</p>
               </div>
@@ -90,7 +90,7 @@
               <div class="feature-description">
                 <h3>Мало<br>
                 туристов</h3>
-                <span>№5</span>
+                <span>&mdash; №5 &mdash;</span>
                 <p>Большинство едет в Гранд Каньон<br>
                 и толпится там</p>
               </div>
@@ -105,6 +105,7 @@
         </section>
       </main>
       <footer class="main-footer">
+        
         <img src="img/map.png" width="1199" height="594" alt="Карта">
         <div class="footer-contacts">
           <section class="contacts">
@@ -150,7 +151,27 @@
             </a>
           </p>
         </div>
+        <section class="modal">
+          <h2 class="visually-hidden">Форма поиска</h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="date-in">Дата заезда:
+              <input class="check-in-date" type="text" name="check-in-date" id="date-in" placeholder="24 апреля 2017">
+            </label>
+            <label class="date-out">Дата выезда:
+              <input class="check-out-date" type="text" name="check-out-date" id="date-out" placeholder="4 июля 2017">
+            </label>
+            <label class="adults-number">Взрослые:
+              <input class="adults" type="number" name="adults" id="adults-number" value="2">
+            </label>
+            <label class="kids-number">Дети:
+              <input class="kids" type="number" name="kids" id="kids-number" value="0">
+            </label>
+            <button class="search-button" type="submit">Найти</button>
+          </form>
+        </section>
       </footer>
+      
     </div>
+    
   </body>
 </html>
