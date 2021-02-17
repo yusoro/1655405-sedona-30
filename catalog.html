@@ -80,15 +80,14 @@
                       </div>
                       <div class="range-controls">
                         <div class="scale">
-                          <div class="bar" style="width: 70%; margin-left: 0%"></div>
+                          <div class="bar" style="width: 80%; margin-left: 0%"></div>
                         </div>
                         <div class="toggle toggle-min" tabindex="0" style="left: 0%"></div>
-                        <div class="toggle toggle-max" tabindex="0" style="left: 70%"></div>
+                        <div class="toggle toggle-max" tabindex="0" style="left: 80%"></div>
                       </div>
                     </div>
                     <button class="filter-button" type="submit">Показать</button>      
-                </fieldset>
-                
+                </fieldset>                
             </form>
         </section>
         <section class="sorting">
@@ -97,18 +96,18 @@
           <span>Сортировка:</span>
           <ul class="sorting-buttons">
             <li>
-              <button type="button" disabled>По цене</button>
+              <a class="current-sorting">По цене</a>
             </li>
             <li>
-              <button type="button">По типу</button>
+              <a href="">По типу</a>
             </li>
             <li>
-              <button type="button">По рейтингу</button>
+              <a href="">По рейтингу</a>
             </li>
           </ul>
           <div class="buttons-up-down">
-            <div class="sorting-ascending"></div>
-            <div class="sorting-descending"></div>
+            <a href="" class="sorting-ascending"></a>
+            <a href="" class="sorting-descending"></a>
           </div>
         </section>
         <section class="result">
@@ -116,7 +115,7 @@
           <ul class="result-list">
               <li class="result-item">
                   <img class="item-picture" src="img/amara.jpg" width="135" height="90" alt="Фото гостиницы Amara Resort & Spa">
-                  <span class="stars stars-4">4 звезды</span>
+                  <div class="stars stars-4"><span class="visually-hidden">4 звезды</span></div>
                   <div class="item-info">
                     <h3><a class="result-item-name hotel" href="#">Amara Resort & Spa</a></h3>
                     <p class="item-price">
@@ -133,7 +132,7 @@
               </li>
               <li class="result-item">
                   <img class="item-picture" src="img/desert-inn.jpg" width="135" height="90" alt="Фото гостиницы Desert Quail Inn">
-                  <span class="stars stars-3">3 звезды</span>
+                  <div class="stars stars-3"><span class="visually-hidden">3 звезды</span></div>
                   <div class="item-info">
                     <h3><a class="result-item-name motel" href="#">Desert Quail Inn</a></h3>
                     <p class="item-price">
@@ -150,7 +149,7 @@
               </li>
               <li class="result-item">
                   <img class="item-picture" src="img/villas.jpg" width="135" height="90" alt="Фото гостиницы Villas at Poco Diablo">
-                  <span class="stars stars-2">2 звезды</span>
+                  <div class="stars stars-2"><span class="visually-hidden">2 звезды</span></div>
                   <div class="item-info">
                     <h3><a class="result-item-name apparts" href="#">Villas at Poco Diablo</a></h3>
                     <p class="item-price">
@@ -160,18 +159,14 @@
                     <div class="list-buttons">
                       <a class="detailed" href="#">Подробнее</a>
                       <button class="reserve" type="submit">Забронировать</button>
-                    </div>
-                  
+                    </div>                  
                   </div>
                   <span class="rating">Рейтинг: 9,2</span>
-              </li>
-          </ul>
-    
+              </li>              
+          </ul>    
         </section>
-
       </main>
-      <footer class="main-footer">
-    
+      <footer class="main-footer">    
         <div class="footer-contacts catalog">
           <section class="contacts">
             <h2 class="visually-hidden">Контактная информация</h2>
