@@ -155,8 +155,10 @@
             <label class="date-out">Дата выезда:
               <input class="check-out-date" type="text" name="check-out-date" id="date-out" placeholder="4 июля 2017">
             </label>
-            <label class="adults-number">Взрослые:
-              <input class="adults" type="number" name="adults" id="adults-number" value="2">
+            <div class="adults-number">
+              <label>Взрослые:
+                <input class="adults" type="number" name="adults" id="adults-number" value="2">              
+              </label>
               <button type="button" class="decrease">
                 <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="12" height="3" fill="#A9A9A9"/>
@@ -167,9 +169,11 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
                 </svg>
               </button>
-            </label>
-            <label class="kids-number">Дети:
-              <input class="kids" type="number" name="kids" id="kids-number" value="0">
+            </div>
+            <div class="kids-number">
+              <label>Дети:
+                <input class="kids" type="number" name="kids" id="kids-number" value="0">              
+              </label>
               <button type="button" class="decrease">
                 <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="12" height="3" fill="#A9A9A9"/>
@@ -180,7 +184,7 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9"/>
                 </svg>
               </button>
-            </label>
+            </div>
             <button class="search-button" type="submit">Найти</button>
           </form>
         </section>

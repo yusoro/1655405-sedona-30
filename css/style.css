@@ -894,7 +894,7 @@
 }
 .search-form label:last-of-type {
   box-sizing: border-box;
-  padding-left: 50px;
+  
 }
 .search-form input {
   height: 38px;
@@ -904,9 +904,16 @@
   line-height: 26px;
   box-sizing: border-box;
   border: none;
+  outline: none;
   background-color: var(--basic-grey);
 }
-
+.search-form input:hover {
+  background-color: var(--input-focus);
+}
+.search-form input:focus {
+  background-color: var(--basic-white);
+  border: 2px solid var(--basic-line);
+}
 .date-in, .date-out {
   width: 458px;
 }
@@ -964,18 +971,22 @@
 }
 .adults-number {
   width: 226px;
+  position: relative;
 }
 .kids-number {
   width: 232px;
+  position: relative;
 }
 .adults::-webkit-outer-spin-button,
 .adults::-webkit-inner-spin-button,
 .kids::-webkit-outer-spin-button,
-.kids::-webkit-inner-spin-button {
+.kids::-webkit-inner-spin-button, 
+.input-cost::-webkit-inner-spin-button,
+.input-cost::-webkit-outer-spin-button {
   -webkit-appearance: none;
   
 }
-.adults, .kids, .input-cost {
+.adults, .kids, .input-cost, .sorting-number {
   -moz-appearance: textfield;
 }
 .increase, .decrease {
@@ -1007,6 +1018,9 @@
 .kids-number .decrease {
   left: 130px;
   top: 12px;
+}
+.kids-number label {
+  padding-left: 50px;
 }
 .increase:hover path, 
 .decrease:hover rect,
