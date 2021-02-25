@@ -496,6 +496,11 @@
   margin-bottom: 23px;
   margin-top: 0;
 }
+.checkbox:focus+label {
+  outline: 2px solid var(--basic-blue);
+  padding: 5px 5px 8px;
+  margin-left: -5px;
+}
 .checkbox:checked+label::before {
   background: url("../img/checkbox-on.svg"); 
 }
@@ -553,6 +558,18 @@
   height: 4px;
   background-color: var(--toggle);
   border: 8px solid var(--basic-white);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--toggle-shadow);
+  cursor: pointer;
+}
+.range-controls .toggle:hover {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background-color: var(--toggle);
+  border: 9px solid var(--basic-white);
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 var(--toggle-shadow);
   cursor: pointer;
@@ -843,6 +860,14 @@
   position: absolute;
   left: 316px;
   top:0;
+  display: block;
+  animation: bounce 0.6s;
+}
+.modal.popup-hidden {
+  display: none;  
+}
+.modal-error {
+  animation: shake 0.6s;
 }
 .search-form {
   box-sizing: border-box;
@@ -1045,4 +1070,36 @@
 .increase:active path, 
 .decrease:active rect {
   fill: var(--basic-blue)
+}
+
+/*animation*/
+@keyframes bounce {
+  0% { 
+    transform: translateY(-2000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
