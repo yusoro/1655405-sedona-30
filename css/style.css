@@ -483,9 +483,6 @@
 .filter-type {
   flex-grow: 3;
 }
-.filter-type li, .filter-facilities li {
-  width: 250px;
-}
 .checkbox+label::before {
   content: "";
   display: inline-block;
@@ -497,11 +494,13 @@
   margin-bottom: 23px;
   margin-top: 0;
 }
-.checkbox:focus+label {
-  outline: 2px solid var(--basic-blue);
-  outline-offset: -2px;
+.checkbox+label {
   padding: 5px 5px 8px;
   margin-left: -5px;
+}
+.checkbox:focus+label {
+  outline: 2px solid var(--basic-blue);
+  outline-offset: -2px;  
 }
 .checkbox:checked+label::before {
   background: url("../img/checkbox-on.svg"); 
