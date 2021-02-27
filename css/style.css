@@ -321,15 +321,31 @@
 }
 .main-footer iframe {
   width: 1199px; 
+  height: 584px;
+  border: none;  
+  margin: 0;
+  padding: 0;
+}
+.main-footer img {
+  width: 1199px; 
   height: 594px;
+  margin: 0;
+  padding: 0;
   border: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .footer-contacts {
   font-weight: 700;
   font-size: 21px;
   background-color: var(--basic-white);
   opacity: 0.9;
-  margin-top: -129px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: grid;
   grid-template-columns:  1fr 1fr 1fr ;
   grid-template-rows: 120px;
@@ -406,7 +422,6 @@
   text-align: center;
   margin: 0;
   width: 327px;
-  /*height: 120px;*/
   position: relative;
   display: flex;
   justify-content: center;
@@ -442,6 +457,9 @@
 .catalog-content {
   display: grid;
   grid-template-rows: min-content min-content 1fr;
+}
+.main-footer .catalog {
+  position: relative;
 }
 .filter {
   background-color: var(--basic-blue);
@@ -482,6 +500,7 @@
 }
 .filter-type {
   flex-grow: 3;
+  margin-left: 5px;
 }
 .checkbox+label::before {
   content: "";
@@ -885,7 +904,7 @@
   background-color: var(--basic-blue);
   padding: 0;
   margin: 0;
-  margin-top: 24px;
+  margin-top: 26px;
   text-transform: uppercase;
   font-family: inherit;
   font-size: 21px;
@@ -919,7 +938,8 @@
 }
 
 .search-form input {
-  height: 38px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   font-family: inherit;
   font-size: 14px;
   font-weight: 700;
@@ -934,7 +954,7 @@
 }
 .search-form input:focus {
   background-color: var(--basic-white);
-  border: 2px solid var(--basic-line);
+  outline: 2px solid var(--basic-line);
 }
 .date-in, .date-out {
   width: 458px;
@@ -943,6 +963,12 @@
 .check-in-date, .check-out-date {
   width: 346px;
   padding-left: 12px;
+  color: var(--basic-black);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .check-in-date::-webkit-input-placeholder, .check-out-date::-webkit-input-placeholder {
   color: var(--basic-black);
@@ -958,11 +984,13 @@
 
 .check-in-date::-moz-placeholder, .check-out-date::-moz-placeholder {
   color: var(--basic-black);
+  opacity: 1;
   font-family: inherit;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
+  vertical-align: bottom;
 }
 .check-in-date:focus::-moz-placeholder, .check-out-date:focus::-moz-placeholder {
   color: transparent;
@@ -1020,12 +1048,12 @@
 .kids::-webkit-inner-spin-button, 
 .input-cost::-webkit-inner-spin-button,
 .input-cost::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  
+  -webkit-appearance: none;  
 }
 .adults, .kids, .input-cost, .sorting-number {
   -moz-appearance: textfield;
 }
+
 .increase, .decrease {
   border: none;
   width: 15px;
