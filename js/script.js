@@ -17,7 +17,8 @@ try {
   isStorageSupport = false;
 }
 
-popupButton.addEventListener ("click", function ()  {    
+popupButton.addEventListener ("click", function (evt)  { 
+  evt.preventDefault();   
   popup.classList.toggle("popup-hidden");
     if (storage) {
       requiredAdults.value = storage;

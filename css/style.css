@@ -300,10 +300,10 @@
   line-height: 26px;
   text-transform: uppercase;
   border: none;
-  width: 568px;
-  min-height: 86px;
+  width: 568px;  
   margin-top: 21px;
-  padding: 0;
+  padding: 30px 0;
+  text-decoration: none;
 }
 .main-button:hover, .main-button:focus {
   background-color: var(--special-brown-hover);
@@ -479,6 +479,7 @@
   text-align: left;
   padding: 0; 
   margin: 0;
+  width: 254px;
 }
 .filter-facilities ul, .filter-type ul {
   list-style: none;
@@ -489,18 +490,17 @@
   margin-top: 25px;
   min-height: 145px;
 }
+.filter-facilities li, .filter-type li {
+  margin-bottom: 23px;  
+}
 .filter-facilities legend, .filter-type legend, .filter-cost legend {
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
   color: var(--basic-white);
 }
-.filter-facilities {
-  flex-grow: 1;
-}
-.filter-type {
-  flex-grow: 3;
-  margin-left: 5px;
+.filter-cost {
+  margin-left: auto;
 }
 .checkbox+label::before {
   content: "";
@@ -510,7 +510,6 @@
   vertical-align: top;
   background: url("../img/checkbox-off.svg") no-repeat;
   margin-right: 14px;
-  margin-bottom: 23px;
   margin-top: 0;
 }
 .checkbox+label {
@@ -530,7 +529,6 @@
 .checkbox:checked:disabled+label::before {
   background: url("../img/checkbox-on-disabled.svg");
 }
-
 .cost-range {
   border: 2px solid var(--basic-white);
   box-sizing: border-box;
@@ -563,7 +561,6 @@
   padding: 0;
   margin: 0;
 }
-
 .range-filter {
   margin: 11px 0 0;
 }
@@ -645,9 +642,8 @@
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  width: 240px;
   padding-left: 25px;
   padding-bottom: 5px;
 }
@@ -657,6 +653,7 @@
   border-bottom: 2px dotted var(--basic-blue);
   padding: 0;
   margin: 0;
+  margin-right: 32px;
 }
 .sorting-buttons .current-sorting {
   color: var(--basic-blue);
@@ -665,13 +662,13 @@
 .sorting span {
   display: inline-block;
   width: 75px;
-  padding-left: 20px;
-  padding-right: 5px;
+  padding-left: 30px;
+  padding-right: 15px;
   padding-bottom: 6px;
   font-size: 12px;
   line-height: 18px;
+  vertical-align: middle;
 }
-
 .sorting-buttons a:hover, .sorting-buttons a:focus {
   color: var(--basic-blue);
 }
@@ -683,7 +680,7 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 5px;
-  width: 528px;
+  margin-left: auto;
 }
 .sorting-ascending {
   width: 0;
@@ -704,7 +701,6 @@
 .sorting-ascending:disabled {
   border-bottom: 11px solid var(--up-triangle);
 }
-
 .sorting-descending {
   border-top: 11px solid var(--basic-blue);
 }
@@ -886,6 +882,7 @@
 .modal.popup-hidden {
   display: none;  
 }
+
 .modal-error {
   animation: shake 0.6s;
 }
@@ -957,7 +954,7 @@
   outline: 2px solid var(--basic-line);
 }
 .date-in, .date-out {
-  width: 458px;
+  width: 458px; 
 }
 
 .check-in-date, .check-out-date {
@@ -995,22 +992,23 @@
 .check-in-date:focus::-moz-placeholder, .check-out-date:focus::-moz-placeholder {
   color: transparent;
 }
-.date-in::after, .date-out::after {
-  content: "";
-  width: 21px;
-  height: 23px;
-  background-image: url("../img/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  position: absolute;
-  top: 7px;
-  right: 10px;
+.calendar:hover path {
+	fill: var(--basic-black);
 }
-.date-in:hover::after, .date-out:hover::after {
-  background-image: url("../img/calendar-hover.svg");
+.calendar:active path {
+	fill: var(--basic-blue);
 }
-.date-in:active::after, .date-out:active::after {
-  background-image: url("../img/calendar-active.svg");
+.calendar {
+  border: none;
+  position: absolute;  
+}
+.calendar.in {
+  right: 58px;
+  top: 61px;
+}
+.calendar.out {
+  right: 58px;
+  top: 128px;
 }
 .adults {
   width: 114px;
@@ -1053,7 +1051,6 @@
 .adults, .kids, .input-cost, .sorting-number {
   -moz-appearance: textfield;
 }
-
 .increase, .decrease {
   border: none;
   width: 15px;
@@ -1097,6 +1094,12 @@
 .increase:active path, 
 .decrease:active rect {
   fill: var(--basic-blue)
+}
+.search-form-content .modal {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  animation: none;
 }
 
 /*animation*/
