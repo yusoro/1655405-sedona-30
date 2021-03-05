@@ -464,7 +464,7 @@
 .filter {
   background-color: var(--basic-blue);
   background-image: url("../img/filter-bg.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   padding: 0 73px;
   min-height: 217px;
 }
